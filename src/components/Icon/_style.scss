@@ -1,0 +1,6 @@
+//each循环所有list，访问list上的所有元素
+@each $key, $val in $theme-colors {
+  .icon-#{$key} {
+    color: $val;
+  }
+}

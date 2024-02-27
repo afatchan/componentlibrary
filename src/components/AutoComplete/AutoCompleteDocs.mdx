@@ -1,0 +1,29 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as AutoCompleteStories from './AutoComplete.stories';
+
+<Meta of={AutoCompleteStories} />
+
+# AutoComplete
+
+Input 自动联想所输入的内容。
+引用方法
+~~~js
+import { AutoComplete } from 'componentlibrary'
+~~~
+* 支持 HTMLInput 的所有基本属性
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleAutoComplete
+
+A AutoComplete can be of DefaultAutoComplete importance.
+
+<Story of={AutoCompleteStories.DefaultAutoComplete} />
+
+
+{/* ... */}

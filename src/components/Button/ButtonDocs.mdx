@@ -1,0 +1,31 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+页面中最常用的的按钮元素，适合于完成特定的交互
+引用方法
+~~~js
+import { Button } from 'componentlibrary'
+~~~
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleButton
+
+A button can be of DefaultButton importance.
+
+<Story of={ButtonStories.DefaultButton} />
+
+A button can be of DangerButton importance.
+
+<Story of={ButtonStories.DangerButton} />
+
+{/* ... */}

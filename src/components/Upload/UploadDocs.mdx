@@ -1,0 +1,31 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as UploadStories from './Upload.stories';
+
+<Meta of={UploadStories} />
+
+# Upload
+
+为网站提供上传文件功能的菜单。支持拖拽上传。
+~~~js
+import { Upload } from 'componentlibrary'
+~~~
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleUpload
+
+A Upload can be of DefaultUpload importance.
+
+<Story of={UploadStories.DefaultUpload} />
+
+
+A Upload can be of DragUpload importance.
+
+<Story of={UploadStories.DragUpload} />
+{/* ... */}

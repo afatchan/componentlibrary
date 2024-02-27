@@ -1,0 +1,109 @@
+.select {
+  // display: flex;
+  align-items: center;
+  position: relative;
+  width: 30%;
+
+}
+
+.select-dropdown {
+  list-style: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  margin: 0;
+  padding: 4px 0px;
+  display: inline-block;
+  line-height: 1.5;
+  white-space: nowrap;
+  width: 100%;
+  font-size: $input-font-size;
+  font-family: $input-font-family;
+  font-weight: $input-font-weight;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+  background: $white;
+  box-shadow: $submenu-box-shadow;
+  border-radius: 4px;
+  overflow: visible;
+  cursor: pointer;
+  transition: $menu-transition;
+  opacity: 1;
+  z-index: 100;
+}
+
+.select-item {
+  padding: $menu-item-padding-y $menu-item-padding-x;
+  cursor: pointer;
+  transition: $menu-transition;
+  color: $body-color;
+
+  &.is-selected {
+    color: $menu-item-active-color !important;
+    background-color: $select-selected-bg;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  &.is-disabled {
+    // background-color: $input-disabled-bg;
+    color: $menu-item-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover {
+    color: $menu-item-active-color !important;
+  }
+
+
+}
+
+.primary {
+  position: absolute;
+  right: 10px;
+}
+
+.tag {
+  border-radius: 4px;
+  border: $input-border-width solid $input-border-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 4px 4px;
+  margin: 2px;
+  // background-color: rgb(238, 244, 249);
+  background-color: $select-selected-bg;
+
+
+  svg {
+    margin-left: 4px;
+  }
+
+  &:hover {
+    box-shadow: $submenu-box-shadow;
+    transition: all 0.3s ease
+  }
+}
+
+.selected-tags {
+  color: $menu-item-active-color;
+  line-height: 20px;
+  top: 10px;
+  left: 4px;
+  position: absolute;
+  white-space: nowrap;
+
+}
+
+.input-inner[readonly] {
+  background-color: $white;
+  opacity: 1;
+}
+
+.rotate {
+  transition: transform .25s ease-in-out;
+  transform: rotate(180deg);
+}

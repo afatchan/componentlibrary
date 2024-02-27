@@ -1,0 +1,31 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu
+
+为网站提供导航功能的菜单。支持横向纵向两种模式，支持下拉菜单。
+~~~js
+import { Menu } from 'componentlibrary'
+~~~
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleMenu
+
+A menu can be of HorizontalMenu importance.
+
+<Story of={MenuStories.HorizontalMenu} />
+
+
+A menu can be of VerticalMenu importance.
+
+<Story of={MenuStories.VerticalMenu} />
+{/* ... */}

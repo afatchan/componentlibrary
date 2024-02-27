@@ -1,0 +1,31 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+选择组件，支持单选和多选两种模式
+~~~js
+import { Select } from 'componentlibrary'
+~~~
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleSelect
+
+A Select can be of SingleSelect importance.
+
+<Story of={SelectStories.SingleSelect} />
+
+
+A Select can be of MultipleSelect importance.
+
+<Story of={SelectStories.MultipleSelect} />
+{/* ... */}

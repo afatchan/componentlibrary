@@ -1,0 +1,31 @@
+import { Meta, Primary, Controls, Story } from '@storybook/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+
+页面中最常用的的弹窗，适合于完成特定的交互
+~~~js
+import { Alert } from 'componentlibrary'
+~~~
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Stories
+
+### ExampleAlert
+
+An alert can be of InfoAlert importance.
+
+<Story of={AlertStories.InfoAlert} />
+
+An alert can be of ErrorAlert importance.
+
+<Story of={AlertStories.ErrorAlert} />
+
+{/* ... */}
