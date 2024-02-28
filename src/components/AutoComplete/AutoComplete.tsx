@@ -166,7 +166,6 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
         value={inputValue}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        inputProps={{ "data-testid": "auto-complete-input" }}
         {...restProps}
       />
       {generateDropdown()}
