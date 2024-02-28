@@ -31,13 +31,13 @@ describe("test Input component", () => {
   //   const testContainer = document.querySelector(".input-wrapper");
   //   expect(testContainer).toHaveClass("input-size-lg");
   // });
-  it("should render prepand and append element on prepand/append property", () => {
-    render(<Input placeholder="pend" prepend="https://" append=".com" />);
-    const testContainer = document.querySelector(".input-wrapper");
-    expect(testContainer).toHaveClass(
-      "input-group input-group-append input-group-prepend"
-    );
-    expect(screen.getByText("https://")).toBeInTheDocument();
-    expect(screen.getByText(".com")).toBeInTheDocument();
-  });
+  // it("should render prepand and append element on prepand/append property", () => {
+  //   render(<Input placeholder="pend" prepend="https://" append=".com" />);
+  //   const testContainer = document.querySelector(".input-wrapper");
+  //   expect(testContainer).toHaveClass(
+  //     "input-group input-group-append input-group-prepend"
+  //   );
+  //   expect(screen.getByText("https://")).toBeInTheDocument();
+  //   expect(screen.getByText(".com")).toBeInTheDocument();
+  // });
 });

@@ -1,6 +1,6 @@
 {
-  "name": "componentlibrary",
-  "version": "0.1.0",
+  "name": "@afat/componentlibrary",
+  "version": "0.1.1",
   "description": "React component library",
   "author": "Afat",
   "private": false,
@@ -13,37 +13,43 @@
     "UI",
     "React"
   ],
+  "type": "module",
+  "homepage": "https://github.com/afatchan/componentlibrary",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/afatchan/componentlibrary"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/classnames": "^2.3.1",
-    "@types/node": "^16.18.78",
-    "@types/react": "^18.2.50",
-    "@types/react-dom": "^18.2.18",
-    "@types/storybook__addon-info": "^5.2.8",
     "axios": "^1.6.7",
     "jest": "^27.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
+    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "husky": {
     "hooks": {
@@ -81,15 +87,31 @@
     "@storybook/react": "^7.6.12",
     "@storybook/react-webpack5": "^7.6.12",
     "@storybook/test": "^7.6.12",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/classnames": "^2.3.1",
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.6",
+    "@types/node": "^16.18.78",
+    "@types/react": "^18.2.50",
+    "@types/react-dom": "^18.2.18",
     "@types/react-router": "^5.1.20",
     "@types/react-transition-group": "^4.4.10",
+    "@types/storybook__addon-info": "^5.2.8",
+    "cross-env": "^7.0.3",
     "eslint-plugin-storybook": "^0.6.15",
     "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "rimraf": "^5.0.5",
     "storybook": "^7.6.12",
     "webpack": "^5.90.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }

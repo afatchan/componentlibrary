@@ -161,11 +161,12 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     );
   };
   return (
-    <div className="auto-complete" ref={componentRef}>
+    <div className="auto-complete" ref={componentRef} data-testid="auto-complete">
       <Input
         value={inputValue}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
+        inputProps={{ "data-testid": "auto-complete-input" }}
         {...restProps}
       />
       {generateDropdown()}

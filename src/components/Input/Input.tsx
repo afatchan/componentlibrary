@@ -56,7 +56,7 @@ export const Input: FC<InputProps> = (props) => {
   }
   return (
     //根据属性判断是否要添加特定的节点
-    <div className={classes} style={style}>
+    <div className={classes} style={style} >
       {prepend && <div className="input-group-prepend">{prepend}</div>}
       {icon && (
         <div className="icon-wrapper">
