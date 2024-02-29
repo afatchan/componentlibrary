@@ -11,8 +11,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        method:'',
-        order: ['Intro', 'Components']
+        order: ["welcome","components",["Button","Alert","Input","AutoComplete","Menu","Select","Upload"]],
       },
     },
   },
