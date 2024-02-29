@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import '../src/styles/index.scss'
+import "../src/styles/index.scss";
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,6 +7,12 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+    },
+    options: {
+      storySort: {
+        method:'',
+        order: ['Intro', 'Components']
       },
     },
   },
